@@ -34,7 +34,7 @@ ARCHDEBS=${ARCHDEBS-python-virtualenvwrapper python2-pip libxml2 libxslt git lib
 ARCHCOMDEBS=${ARCHCOMDEBS-lib32-libtinfo}
 REPOS=${REPOS-ana idalink cooldict mulpyplexer monkeyhex superstruct archinfo vex pyvex cle claripy angr angr-management angrop angr-doc binaries ailment simuvex}
 declare -A EXTRA_DEPS
-EXTRA_DEPS["angr"]="unicorn"
+EXTRA_DEPS["angr"]="unicorn==1.0.2"
 EXTRA_DEPS["pyvex"]="--pre capstone"
 
 ORIGIN_REMOTE=${ORIGIN_REMOTE-$(git remote -v | grep origin | head -n1 | awk '{print $2}' | sed -e "s|[^/:]*/angr-dev.*||")}
